@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>klerp</title>
+        <style>
+            body{
+                display:flex;
+                height: 100vh;
+                margin: 0;
+            }
+            .left-panel{
+                display:flex;
+                flex:2;
+                justify-content:center;
+                align-items:center;
+                background-color: #6c757d;
+                
+            }
+            
+            .right-panel{
+                display: flex;
+                flex:1;
+                justify-content: center; /*gets into middle of page horizantally*/
+                align-items: center;/*gets to middle of page vertiically*/
+                flex-direction: column;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f3f3f3;
+                
+            }
+            input:user-invalid{
+                border-color:red;
+            }
+            input:user-valid{
+                border-color:rgb(5, 165, 5);
+            }
+            input,button{
+                padding: 5px 10px;
+                width: 300px;
+                margin:5px;
+                height: 40px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                border-width: 1px;
+                opacity: 0.8;
+            }
+            
+            .left-panel > img{
+                max-width: min(450px,90vw);
+            }
+            .login h2{
+                text-align: center;
+
+            }
+            .login{
+                background: white;
+                padding: 40px;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            }
+            #log{
+                background-color:#323131;
+                color: white;
+            }
+            .content{
+                text-align: center;
+                color: rgb(150, 38, 38);
+                padding: 15px;
+                font-size: small;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="left-panel">
+            <img src="kl_logo.png" alt="logo">
+        </div>
+        <div class="right-panel">
+            <div class="login">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" name="username" placeholder="username" minlength = "3" maxlength="20 " required><br>
+                    <input type="password" name="password" placeholder="password" required minlength="8"><br>
+                    <input type="text" name="verification captcha" placeholder="enter verification code" required><br>
+                    <div class="content">
+                        <span>Forgot Password?</span>
+                    </div>
+                    
+                    <button type="submit" id="log">Login</button>
+                </form>
+
+            </div>
+        </div>
+        
+    </body>
+</html>
