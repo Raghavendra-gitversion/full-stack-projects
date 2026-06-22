@@ -1,4 +1,4 @@
-const birthday=new Date("June 22, 2026 19:30:00")
+const birthday=new Date("June 22, 2026 00:00:00")
 
 const days=document.getElementById("days")
 const hours=document.getElementById("hours")
@@ -12,9 +12,10 @@ const updateCountdown=()=>{
 
     if (difference <= 0) {
 
-        document.querySelector(".container").innerHTML = `
-            <h1>🎉 Happy Birthday! 🎂</h1>
-        `;
+        document.querySelector(".card").style.display = "none";
+        document.querySelector("h2").style.display = "none";
+
+        document.getElementById("birthdayContent").style.display = "block";
 
         clearInterval(timer);
         return;
