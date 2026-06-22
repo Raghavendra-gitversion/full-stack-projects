@@ -1,4 +1,4 @@
-const birthday = new Date("June 22, 2026 00:00:00");
+const birthday = new Date("June 21, 2026 7:00:00");
 
 const days = document.getElementById("days");
 const hours = document.getElementById("hours");
