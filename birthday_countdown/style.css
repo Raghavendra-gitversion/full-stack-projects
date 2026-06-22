@@ -1,9 +1,11 @@
 body{
   margin:0;
   padding:0;
+  overflow-x: hidden;
 }
 .container{
-  height:100vh;
+  
+  min-height: 100vh;
   display:flex;
   justify-content: center;
   flex-direction: column;
@@ -14,6 +16,8 @@ body{
   display: flex;
   flex-direction: row;
   gap:30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .days{
   display:flex;
@@ -63,4 +67,62 @@ body{
   font-size: 100px;
   margin-top: -10px;
   margin-bottom: -10px;
+}
+#birthdayContent{
+    display: none; /* hidden initially */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(255,255,255,0.9);
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .container h2 {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    width: 160px;
+    height: 160px;
+  }
+
+  .card h1 {
+    font-size: 60px;
+  }
+
+  .photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  #birthdayContent h1 {
+    font-size: 2rem;
+    padding: 0 15px;
+  }
 }
