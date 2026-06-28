@@ -1,0 +1,151 @@
+
+body{
+  min-height:100vh;
+  margin:0;
+  padding:0;
+  
+  display:flex;
+  justify-content:center;
+  background-color:black;
+  
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  width:977px;
+  min-height:100vh;
+  margin:0;
+  padding:0;
+}
+.pictures{
+  display: flex;
+  flex:0 0 350px;
+  background-color: red;
+  height: 100%;
+  width:100%;
+  position: relative;
+  align-items: center;
+
+}
+.logos{
+  
+  height:100%;
+  width:100%;
+
+}
+.logos img{
+  display: block;
+  height: 100%;
+  width:100%;
+  margin:0;
+  padding:0;
+  object-fit: cover;
+  
+}
+.backcard{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  width:100%;
+
+  position:absolute;
+  margin-top:-280px;
+  
+}
+.logo{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norsebold.otf");
+}
+.logo>span{
+  color:white;
+  font-size: 62px;
+  font-family: "Norse",sans-serif;
+
+}
+.logo > img{
+  width:auto;
+  height:100px;
+}
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norse-Bold.otf");
+}
+.content{
+  flex:1;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:200px;
+  background-color: white;
+  box-shadow: 0 1px 12px rgba(150, 149, 149, 0.5);
+  margin-bottom: 20px;
+}
+.inner-card{
+  display: flex;
+  flex-direction: row;
+  
+  gap:50px;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  border:solid thin rgb(180, 174, 174) ;
+  width:200px;  
+  height:22px;  
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-width: 1px;
+}
+label{
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.outer-card{
+  display:flex;
+  flex-direction: column;
+  margin-left:40px
+}
+button{
+  width:150px;
+  height:35px;
+  border-radius: 5px;
+  background-color: #013e37;
+  color:#ffefb3;
+}
+p{
+  font-size: 13px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.outer-card >span{
+  margin-left: 5px;
+  color:#013e37;
+}
+input:user-valid{
+  border-color: green;
+
+}
+input:user-invalid{
+  border-color: red;
+  
+}
