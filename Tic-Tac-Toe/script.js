@@ -6,6 +6,8 @@ const game=document.querySelector('.game-container');
 const home=document.querySelector('.home');
 const restart=document.querySelector('.restart');
 const status=document.querySelector('.status')
+const background=document.querySelector('.main')
+console.log(background);
 
 
 friend.addEventListener('click',function(){
@@ -16,7 +18,7 @@ function moveToGame(){
  
   home.style.display='none';
   game.style.display='flex';  
-  restart.style.display='flex';
+ 
     
 
 }
@@ -25,8 +27,16 @@ playagain.addEventListener('click',function(){
   
   home.style.display='flex';
   game.style.display='none';
-  restart.style.display='none';
-  status.style.display='none';
+  restart.classList.remove('show');
+  
+  console.log(background.style.filter);
+
+  background.style.filter = "blur(0px)";
+
+  console.log(background.style.filter);
+  currentPlayer = 'X';
+  filledCells = 0;
+  gameOver = false;
   cells.forEach(cell=>{
     cell.textContent='';
   })
@@ -67,17 +77,22 @@ function checkWinner(){
     if(cells[a].textContent===cells[b].textContent && cells[a].textContent===cells[c].textContent && cells[a].textContent!==''){
       if(cells[a].textContent==='X'){
         document.getElementById('game_status').textContent="You  won";
-        status.style.display='block';
+        restart.classList.add('show');
+
+        background.style.filter='blur(5px)';
         gameOver=true;
       }else{
         document.getElementById('game_status').textContent="Friend Won"
-        status.style.display='block';
+        restart.classList.add('show');
+        background.style.filter='blur(5px)';
         gameOver=true;
       }
       
     }else if(filledCells===9){
       document.getElementById('game_status').textContent="It's a Draw"
-      status.style.display='block';
+      restart.classList.add('show');
+      background.style.filter='blur(5px)';
+      gameOver=true;
       
     }
   }
@@ -87,8 +102,11 @@ reset.addEventListener('click',function(){
   cells.forEach(cell=>{
     cell.textContent='';
   })
-  status.style.display='none';
+  
   currentPlayer='X';
   gameOver=false; 
   filledCells=0;
+  restart.classList.remove('show');
+  background.style.filter='blur(0)';
+
 })
